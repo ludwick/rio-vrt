@@ -74,6 +74,21 @@ def test_build_vrt_hollow(tiles: List[Path], data_dir: Path, file_regression) ->
         file_regression.check(vrt_tree, basename="hollow_vrt", extension=".vrt")
 
 
+def test_build_vrt_single(tiles: List[Path], data_dir: Path, file_regression) -> None:
+    """Test a complete vrt there is only one tile.
+
+    Args:
+        tiles: the list of tile path
+        data_dir: the data directory
+        file_regression: the pytest regression file fixture
+    """
+    tiles = [tiles[0]]
+    with NamedTemporaryFile(suffix=".vrt", dir=data_dir) as vrt_path:
+        file = rio_vrt.build_vrt(vrt_path.name, tiles, relative=True)
+        vrt_tree = BeautifulSoup(file.read_text(), "xml").prettify()
+        file_regression.check(vrt_tree, basename="single_vrt", extension=".vrt")
+
+
 def test_build_vrt_stack(tiles: List[Path], data_dir: Path, file_regression) -> None:
     """Test a complete vrt where some tiles are missing.
 

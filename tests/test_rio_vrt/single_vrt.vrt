@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VRTDataset rasterXSize="197" rasterYSize="179">
+ <SRS>
+  PROJCS["WGS 84 / UTM zone 18N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-75],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32618"]]
+ </SRS>
+ <GeoTransform>
+  101985.0, 300.0379266750948, 0.0, 2826915.0, 0.0, -300.0379266750948
+ </GeoTransform>
+ <OverviewList resampling="nearest">
+  2 4 8
+ </OverviewList>
+ <VRTRasterBand band="1" dataType="Byte">
+  <Offset>
+   0.0
+  </Offset>
+  <Scale>
+   1.0
+  </Scale>
+  <ColorInterp>
+   Red
+  </ColorInterp>
+  <NoDataValue>
+   0.0
+  </NoDataValue>
+  <ComplexSource>
+   <SourceFilename relativeToVRT="1">
+    raw/tile0.tiff
+   </SourceFilename>
+   <SourceBand>
+    1
+   </SourceBand>
+   <SourceProperties BlockXSize="197" BlockYSize="3" DataType="Byte" RasterXSize="197" RasterYSize="179"/>
+   <SrcRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <DstRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <NODATA>
+    0.0
+   </NODATA>
+  </ComplexSource>
+ </VRTRasterBand>
+ <VRTRasterBand band="2" dataType="Byte">
+  <Offset>
+   0.0
+  </Offset>
+  <Scale>
+   1.0
+  </Scale>
+  <ColorInterp>
+   Green
+  </ColorInterp>
+  <NoDataValue>
+   0.0
+  </NoDataValue>
+  <ComplexSource>
+   <SourceFilename relativeToVRT="1">
+    raw/tile0.tiff
+   </SourceFilename>
+   <SourceBand>
+    2
+   </SourceBand>
+   <SourceProperties BlockXSize="197" BlockYSize="3" DataType="Byte" RasterXSize="197" RasterYSize="179"/>
+   <SrcRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <DstRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <NODATA>
+    0.0
+   </NODATA>
+  </ComplexSource>
+ </VRTRasterBand>
+ <VRTRasterBand band="3" dataType="Byte">
+  <Offset>
+   0.0
+  </Offset>
+  <Scale>
+   1.0
+  </Scale>
+  <ColorInterp>
+   Blue
+  </ColorInterp>
+  <NoDataValue>
+   0.0
+  </NoDataValue>
+  <ComplexSource>
+   <SourceFilename relativeToVRT="1">
+    raw/tile0.tiff
+   </SourceFilename>
+   <SourceBand>
+    3
+   </SourceBand>
+   <SourceProperties BlockXSize="197" BlockYSize="3" DataType="Byte" RasterXSize="197" RasterYSize="179"/>
+   <SrcRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <DstRect xOff="0" xSize="197" yOff="0" ySize="179"/>
+   <NODATA>
+    0.0
+   </NODATA>
+  </ComplexSource>
+ </VRTRasterBand>
+</VRTDataset>
